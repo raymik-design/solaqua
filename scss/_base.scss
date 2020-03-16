@@ -1,0 +1,6 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* now 1rem = 10px (10px/16px = 62.5% TO GET PERCENTAGE)  This defines what 1rem is */
+  scroll-behavior: smooth;
+}
