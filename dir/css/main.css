@@ -353,11 +353,10 @@ textarea {
   .header {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'videoBg videoBg videoBg videoBg videoBg videoBg videoBg videoBg videoBg videoBg videoBg videoBg' ' overlay overlay overlay overlay overlay overlay overlay overlay';
+    -ms-grid-rows: (minmax(15rem, auto))[3];
+        grid-template-rows: repeat(3, minmax(15rem, auto));
     -ms-grid-columns: (1fr)[12];
         grid-template-columns: repeat(12, 1fr);
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
   }
 }
 
@@ -372,24 +371,37 @@ textarea {
   grid-row: 1 / -1;
 }
 
+@media only screen and (min-width: 62.5em) {
+  .header__mobImg {
+    display: none;
+  }
+}
+
 .header__video {
   display: none;
 }
 
 @media only screen and (min-width: 62.5em) {
   .header__video {
-    grid-area: videoBg;
+    display: block;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
 .header__background-overlay {
-  background: url(../img/grid-70.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
   z-index: 10;
-  grid-area: overlay;
   grid-row: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .header__topTitle {
+  text-shadow: 0 1px 0 #000;
   grid-area: topTitle;
   color: #fff;
   text-transform: uppercase;
@@ -400,6 +412,7 @@ textarea {
   -ms-grid-column-align: center;
       justify-self: center;
   letter-spacing: 0.25rem;
+  display: inline-block;
   z-index: 10;
 }
 
@@ -414,11 +427,39 @@ textarea {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    z-index: 10;
   }
 }
 
 .header__title {
   font-size: 5rem;
+}
+
+@media only screen and (min-width: 62.5em) {
+  .header__title {
+    font-size: 7rem;
+    background: #efefef;
+    color: #000;
+  }
+}
+
+@media only screen and (min-width: 62.5em) {
+  .header__heating {
+    background: #efefef;
+    color: #000;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 62.5em) {
+  .header__subtitle, .header__ecoF, .header__enviroment {
+    background: yellow;
+    color: #000;
+    margin: 5px 0;
+  }
+  .header__ecoF {
+    width: 76%;
+  }
 }
 
 .header__horizontal {
@@ -434,11 +475,12 @@ textarea {
 
 @media only screen and (min-width: 62.5em) {
   .header__turbines {
+    display: block;
     -ms-grid-row: 2;
     grid-row: 2;
-    -ms-grid-column: 7;
+    -ms-grid-column: 8;
     -ms-grid-column-span: 4;
-    grid-column: 7 / 11;
+    grid-column: 8 / 12;
     z-index: 11;
     max-width: 100%;
   }
