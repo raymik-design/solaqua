@@ -15,6 +15,8 @@
     'overlay overlay overlay overlay';
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
+  width: 100vw;
+  height: 100vh;
 
   // css grid for Large screen
   @media only screen and (min-width: $bp-large) {
