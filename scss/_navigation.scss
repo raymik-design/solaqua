@@ -12,7 +12,7 @@
     z-index: 999;
   }
   &__size {
-    height: 5rem;
+    height: 7rem;
 
     @media only screen and (min-width: $bp-large) {
       height: auto;
@@ -40,8 +40,8 @@ nav {
   }
 
   &.top-right {
-    top: -$size * ($items - 2.2);
-    right: -$size * ($items - 2.2);
+    top: -$size * ($items - 1.7);
+    right: -$size * ($items - 1.7);
     @media only screen and (min-width: $bp-large) {
       top: -$sizeBig * ($items - 2.2);
       right: -$sizeBig * ($items - 2.2);
