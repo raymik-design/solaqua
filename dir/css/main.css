@@ -342,9 +342,9 @@ textarea {
 .header {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'mobImg mobImg mobImg mobImg' 'overlay overlay overlay overlay';
-  -ms-grid-rows: (minmax(9rem, auto))[3];
-      grid-template-rows: repeat(3, minmax(9rem, auto));
+      grid-template-areas: 'mobImg mobImg mobImg mobImg';
+  -ms-grid-rows: (minmax(20rem, auto))[3];
+      grid-template-rows: repeat(3, minmax(20rem, auto));
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
 }
@@ -362,7 +362,9 @@ textarea {
 }
 
 .header__mobImg {
-  background: url(../img/phone/solarHouse.jpg) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/phone/solarHouse.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/phone/solarHouse.jpg);
+  background-size: cover;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -383,31 +385,21 @@ textarea {
 .header__background-overlay {
   background: url(../img/grid-70.png);
   z-index: 10;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: overlay;
   grid-row: 1 / -1;
-}
-
-@media only screen and (min-width: 62.5em) {
-  .header__background-overlay {
-    background: url(../img/grid-70.png);
-  }
 }
 
 .header__topTitle {
   grid-area: topTitle;
   color: #fff;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.6rem;
   -ms-grid-row: 2;
   grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / 5;
+  grid-column: 1 / -1;
   -ms-grid-column-align: center;
       justify-self: center;
+  letter-spacing: 0.2rem;
   z-index: 10;
 }
 

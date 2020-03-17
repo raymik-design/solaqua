@@ -10,10 +10,9 @@
 // css grid mobile first
 .header {
   display: grid;
-  grid-template-areas:
-    'mobImg mobImg mobImg mobImg'
-    'overlay overlay overlay overlay';
-  grid-template-rows: repeat(3, minmax(9rem, auto));
+  grid-template-areas: 'mobImg mobImg mobImg mobImg';
+
+  grid-template-rows: repeat(3, minmax(20rem, auto));
   grid-template-columns: repeat(4, 1fr);
 
   // css grid for Large screen
@@ -28,7 +27,9 @@
   }
 
   &__mobImg {
-    background: url(../img/phone/solarHouse.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../img/phone/solarHouse.jpg);
+    background-size: cover;
     grid-area: mobImg;
     grid-row: 1 / -1;
   }
@@ -47,27 +48,23 @@
       //     object-fit: cover;
     }
   }
+  // @media only screen and (min-width: $bp-large) {
   &__background-overlay {
     background: url(../img/grid-70.png);
     z-index: 10;
     grid-area: overlay;
     grid-row: 1 / -1;
-    // grid-column: 1 / -1; //till the end use -1
-
-    @media only screen and (min-width: $bp-large) {
-      background: url(../img/grid-70.png);
-    }
   }
 
   &__topTitle {
     grid-area: topTitle;
     color: #fff;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.6rem;
     grid-row: 2;
-    grid-column: 1 / 5;
+    grid-column: 1 / -1;
     justify-self: center;
-    // margin: 0 auto;
+    letter-spacing: 0.2rem;
     z-index: 10; //nested
 
     @media only screen and (min-width: $bp-large) {
