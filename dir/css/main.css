@@ -362,7 +362,7 @@ textarea {
 }
 
 .header__mobImg {
-  background: url(/dir/img/phone/solarHouse.jpg) no-repeat;
+  background: url(../img/phone/solarHouse.jpg) no-repeat;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -381,7 +381,7 @@ textarea {
 }
 
 .header__background-overlay {
-  background: url(/dir/img/grid-70.png);
+  background: url(../img/grid-70.png);
   z-index: 10;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -392,7 +392,7 @@ textarea {
 
 @media only screen and (min-width: 62.5em) {
   .header__background-overlay {
-    background: url(/dir/img/grid-70.png);
+    background: url(../img/grid-70.png);
   }
 }
 

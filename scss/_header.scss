@@ -28,7 +28,7 @@
   }
 
   &__mobImg {
-    background: url(/dir/img/phone/solarHouse.jpg) no-repeat;
+    background: url(../img/phone/solarHouse.jpg) no-repeat;
     grid-area: mobImg;
     grid-row: 1 / -1;
   }
@@ -48,14 +48,14 @@
     }
   }
   &__background-overlay {
-    background: url(/dir/img/grid-70.png);
+    background: url(../img/grid-70.png);
     z-index: 10;
     grid-area: overlay;
     grid-row: 1 / -1;
     // grid-column: 1 / -1; //till the end use -1
 
     @media only screen and (min-width: $bp-large) {
-      background: url(/dir/img/grid-70.png);
+      background: url(../img/grid-70.png);
     }
   }
 
