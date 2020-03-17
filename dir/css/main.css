@@ -399,7 +399,7 @@ textarea {
   grid-column: 1 / -1;
   -ms-grid-column-align: center;
       justify-self: center;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.25rem;
   z-index: 10;
 }
 
@@ -417,9 +417,13 @@ textarea {
   }
 }
 
+.header__title {
+  font-size: 5rem;
+}
+
 .header__horizontal {
   border: 0;
-  height: 0.4rem;
+  height: 0.2rem;
   background-image: -webkit-gradient(linear, left top, right top, from(#0e9402), color-stop(rgba(255, 255, 255, 0.678)), to(rgba(204, 204, 204, 0)));
   background-image: linear-gradient(to right, #0e9402, rgba(255, 255, 255, 0.678), rgba(204, 204, 204, 0));
 }
@@ -437,38 +441,6 @@ textarea {
     grid-column: 7 / 11;
     z-index: 11;
     max-width: 100%;
-    -webkit-animation-name: Floating;
-            animation-name: Floating;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-  }
-}
-
-@-webkit-keyframes Floating {
-  from {
-    -webkit-transform: translate(0, 0px);
-  }
-  65% {
-    -webkit-transform: translate(0, 3rem);
-  }
-  to {
-    -webkit-transform: translate(0, 0px);
-  }
-}
-
-@keyframes Floating {
-  from {
-    -webkit-transform: translate(0, 0px);
-  }
-  65% {
-    -webkit-transform: translate(0, 3rem);
-  }
-  to {
-    -webkit-transform: translate(0, 0px);
   }
 }
 
@@ -856,5 +828,139 @@ html {
   font-size: 62.5%;
   /* now 1rem = 10px (10px/16px = 62.5% TO GET PERCENTAGE)  This defines what 1rem is */
   scroll-behavior: smooth;
+}
+
+.header__title {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.05em solid;
+  /* The typwriter cursor */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3s steps(50, end), blink-caret 0.7s step-end infinite;
+          animation: typing 3s steps(50, end), blink-caret 0.7s step-end infinite;
+  /* The typing effect */
+  /* The typewriter cursor effect */
+  /* The typewriter cursor effect */
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@-webkit-keyframes blink-carets {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes blink-carets {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.header__horizontal {
+  -webkit-animation: load 1.2s linear infinite;
+          animation: load 1.2s linear infinite;
+}
+
+@-webkit-keyframes load {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes load {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.header__turbines {
+  -webkit-animation-name: Floating;
+          animation-name: Floating;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes Floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 3rem);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+  }
+}
+
+@keyframes Floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 3rem);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

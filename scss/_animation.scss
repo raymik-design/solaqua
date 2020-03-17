@@ -1,0 +1,94 @@
+.header {
+  &__title {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.05em solid; /* The typwriter cursor */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3s steps(50, end), blink-caret 0.7s step-end infinite;
+
+    /* The typing effect */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-carets {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
+    }
+  }
+
+  &__horizontal {
+    animation: load 1.2s linear infinite;
+  }
+  @keyframes load {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  &__turbines {
+    animation-name: Floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  @-webkit-keyframes Floating {
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+    65% {
+      -webkit-transform: translate(0, 3rem);
+    }
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
+  }
+  @-moz-keyframes Floating {
+    from {
+      -moz-transform: translate(0, 0px);
+    }
+    65% {
+      -moz-transform: translate(0, 3rem);
+    }
+    to {
+      -moz-transform: translate(0, -0px);
+    }
+  }
+  @keyframes Floating {
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+    65% {
+      -webkit-transform: translate(0, 3rem);
+    }
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
+  }
+}
