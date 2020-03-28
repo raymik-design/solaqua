@@ -9,7 +9,7 @@
   // css grid for Large screen
   @media only screen and (min-width: $bp-large) {
     display: grid;
-    grid-template-rows: repeat(3, minmax(15rem, auto));
+    grid-template-rows: repeat(3, minmax(18rem, auto));
     grid-template-columns: repeat(12, 1fr);
   }
 
@@ -43,28 +43,27 @@
     grid-row: 1 / -1;
     grid-column: 1 / -1;
   }
+}
 
-  &__topTitle {
-    text-shadow: 0 1px 0 #000;
-    grid-area: topTitle;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 2.6rem;
+.topTitle {
+  text-shadow: 0 1px 0 #000;
+  // grid-area: topTitle;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  grid-row: 2;
+  grid-column: 1 / -1;
+  justify-self: center;
+  letter-spacing: 0.25rem;
+  display: inline-block;
+  z-index: 10; //nested
+
+  @media only screen and (min-width: $bp-large) {
+    font-size: 4rem;
     grid-row: 2;
-    grid-column: 1 / -1;
-    justify-self: center;
-    letter-spacing: 0.25rem;
-    display: inline-block;
-    z-index: 10; //nested
-
-    @media only screen and (min-width: $bp-large) {
-      // transform: rotate(-8deg);
-      font-size: 4rem;
-      grid-row: 2;
-      grid-column: 3 / 7;
-      align-self: center;
-      z-index: 10;
-    }
+    grid-column: 2 / 8;
+    align-self: center;
+    z-index: 10;
   }
 
   &__title {
@@ -72,32 +71,9 @@
 
     @media only screen and (min-width: $bp-large) {
       font-size: 7rem;
-      background: #efefef;
-      color: #000;
     }
   }
 
-  @media only screen and (min-width: $bp-large) {
-    &__heating {
-      background: #efefef;
-      color: #000;
-      margin-top: 5px;
-    }
-  }
-
-  @media only screen and (min-width: $bp-large) {
-    &__subtitle,
-    &__ecoF,
-    &__enviroment {
-      background: yellow;
-      color: #000;
-      margin: 5px 0;
-    }
-
-    &__ecoF {
-      width: 76%;
-    }
-  }
   &__horizontal {
     border: 0;
     height: 0.2rem;
@@ -108,14 +84,13 @@
       rgba(204, 204, 204, 0)
     );
   }
-
   &__turbines {
     display: none;
 
     @media only screen and (min-width: $bp-large) {
       display: block;
       grid-row: 2;
-      grid-column: 8 / 12;
+      grid-column: 8 / 11;
       z-index: 11; //nested
       max-width: 100%;
     }
