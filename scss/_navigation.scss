@@ -2,17 +2,14 @@
 
 .topHeader {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
 
   &__logo {
     position: fixed;
     padding: 1rem 2rem;
     z-index: 999;
   }
-  &__topHeader--size {
-    height: 7rem;
+  #topHeader__logo--size {
+    height: 6rem;
 
     @media only screen and (min-width: $bp-large) {
       height: auto;
