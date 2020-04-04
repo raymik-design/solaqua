@@ -353,8 +353,6 @@ textarea {
   .header {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (minmax(18rem, auto))[3];
-        grid-template-rows: repeat(3, minmax(18rem, auto));
     -ms-grid-columns: (1fr)[12];
         grid-template-columns: repeat(12, 1fr);
   }
